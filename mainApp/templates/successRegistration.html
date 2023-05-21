@@ -1,0 +1,35 @@
+{% extends "order.html" %}
+{% load static %}
+
+{% block title %}
+<style>
+marquee {
+    width: 900px;
+    margin-top: 70px;
+    margin-left: 160px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    border: 4px black solid;
+    border-radius: 100px;
+    animation-name: ani1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    margin-bottom:232px;
+}
+
+@keyframes ani1 {
+    from {
+        background: rgb(175, 217, 119);
+    }
+
+    to {
+        background: rgb(78, 182, 217);
+    }
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<marquee class="marq" behavior="alternate" direction="alternate" onmouseout="start()" onmouseover="stop()">****Registration
+    Successfull!!****</marquee>
+{% endblock %} 

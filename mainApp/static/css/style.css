@@ -1,0 +1,222 @@
+*{
+	margin: 0;
+}
+#ha1{
+width: 100px;
+text-align: center;
+}
+.back:hover{
+background-color: white;
+padding: 18px;
+}
+.btn:hover{
+background-color: blue;
+}
+.banner-btn{
+	width: 200px;
+	position: absolute;
+	left: 30px;
+	padding: 10px;
+
+}
+.banner-btn:hover{
+	box-shadow: white;
+}
+.banner-section{
+	position: relative;
+
+}
+#banner-btn1{
+	top: 20%;
+}
+#banner-btn2{
+	top: 40%;
+}
+
+
+#banner-btn3{
+	top: 60%;
+}
+.card-title{
+	height: 50px;
+}
+#para{
+text-align: center;
+}
+
+.cont{
+	margin: 0;
+	position: relative;
+}
+.subdiv{
+	position: absolute;
+	top: 400px;
+	left: 500px;
+}
+button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+	text-decoration: none;
+	padding: 16px 32px;
+}
+.button1:hover {
+    background-color: #008CBA;
+    color: white;
+}
+#in1{
+	width: 15%;
+}
+
+
+
+
+/* All Footer */
+
+#c1 {
+	height: 25px;
+}
+
+#c2 {
+	text-align: right;
+	padding-top: 22px;
+	padding-right: 10px;
+}
+
+
+.fa {
+	padding: 10px;
+	font-size: 30px;
+	width: 33px;
+	text-align: center;
+	text-decoration: none;
+	margin: .5px .5px;
+}
+
+.fa:hover {
+	opacity: 0.7;
+}
+
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+
+.fa-instagram {
+	background: #125688;
+	color: white;
+}
+
+.fa-pinterest {
+	background: #cb2027;
+	color: white;
+}
+
+.fa-google {
+	background: #dd4b39;
+	color: white;
+}
+/* End Footer */
+
+
+
+/* Order Page */
+
+.satyamevJayate {
+	height: 170px;
+	width: 150px;
+}
+
+
+p {
+	margin-left: 45px;
+}
+.nid{
+	opacity: 0.1;
+}
+
+/* End Order */
+/* Footer Vipul New */
+.footdiv{
+	background-color: black;
+
+}
+
+
+.fa {
+/* float: right; */
+
+margin-top:-10px ;
+}
+
+.fa:hover {
+	opacity: 0.5;
+}
+
+.fa-facebook {
+	border-radius: 100px;
+	background: #3B5998;
+	color: white;
+}
+
+.fa-instagram {
+	border-radius: 100px;
+
+	background: #125688;
+	color: white;
+}
+
+.fa-pinterest {
+	border-radius: 100px;
+
+	background: #cb2027;
+	color: white;
+}
+
+.fa-google {
+	border-radius: 100px;
+
+	background: #dd4b39;
+	color: white;
+	
+}
+.container .csaved
+{
+	/* background-color: #008CBA; */
+	width: 25vw;
+	/* float: right; */
+	margin-left: 900px;
+}
+/* #FooterImage{
+   position: relative;
+   top: 15px;
+   left: 15px;
+} */
+#foodp1{
+	color: white;
+	text-align: center;
+	text-decoration:none;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+/* About Us Page Design */

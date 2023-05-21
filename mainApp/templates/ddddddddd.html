@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    {% block title %}
+    <title>TOMATO</title>
+    
+    {% endblock %}
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg  w-100 background  " style="background-color: 			rgb(0, 0, 0)">
+        <div class="container-fluid ">
+           <a href="/"><img src="{% static "images/foodopia logo.png" %}" height="60px"> </a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#myNavbar" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse  id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 " >
+             
+              <li class="nav-item ">
+                <a id="ha1" class="nav-link text-light   "   href="/order/"> <b> <i> <font size="+2"> Orders</font></i></b></a>
+              </li>
+               <li class="nav-item">
+                <a id="ha1" class="nav-link text-light   w-100" href="/AboutUs/" style="width: 6vw"> <b> <i><font size="+2"> About </font></i></b></a>
+              </li>
+              <li class="nav-item">
+                <a id="ha1" class="nav-link text-light w-100 "  href="/registerResturant/"><b><i> <font size="+2"> Add Resturant</font></i></b></a>
+              </li> 
+              <li class="nav-item">
+                <a id="ha1" class="nav-link text-light  "  href="/login/"><b><i> <font size="+2"> Login</font></i></b></a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+      {% block content %}
+      <div class="cont">
+      <img class="w-100" src="{% static "Images/mainpage.jpg" %}" style= "height:800px">
+    
+    <!-- <div class="subdiv">
+      <a href="/order/" class="button button1">Orders</a>
+      <a href="/location/" class="button button1">Enter Location</a>
+    </div> -->
+  </div>
+  <footer class="bg-dark text-center w-100 text-white">
+    
+    <!-- <section  class="mb-4"> -->
+        <div  class="container p-4 pb-0  ">
+          <img id="FooterImage" src="{% static "images/foodopia logo.png" %}" style="float: left; margin-top: -15px; margin-left: -50px; " alt="">  
+          <!-- <img src="foodopia logo.png"> -->
+          <div class="csaved">  
+          <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+            <a href="#" class="fa fa-google"></a><br>
+          </div>
+            <p id="foodp1">© 2023 Copyright: FoodOpia</p>
+
+    <!-- </section> -->
+    </div>
+   
+</footer>
+
+  <!-- <footer style="text-align: center;">
+      
+    <div id="f" style="margin: 30px;">
+      <img src="{% static 'images/foodopia logo.png' %}" style="float: left;" height="60px" >
+    </div>
+    <div class="dibi" style="float: right;"> 
+        <a  href="https://www.facebook.com/">
+        <ion-icon name="logo-facebook" size="large"></ion-icon></a>
+        <a  href="/Home.html">
+        <ion-icon name="logo-google" size="large"></ion-icon></a>
+        <a  href="https://www.instagram.com/rajput_aman07/">
+        <ion-icon name="logo-instagram" size="large"></ion-icon></a>
+        <a  href="https://in.pinterest.com/">
+        <ion-icon name="logo-pinterest" size="large"></ion-icon></a>
+      </div>
+
+  </footer> -->
+  {% endblock %}
+{% block footer %}
+
+{% endblock %}
+
+      <script>
+        function fun1() {
+        var a= document.getElementById("in1").value
+        if (a == "Chicken" || a== "chicken" ){
+
+          console.log("Helloooooooooooooo")
+          window.location.href = "/Payment/";
+        }
+          // body...
+        }
+
+</script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" type="text/javascript" crossorigin="anonymous"></script>
+
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    </body>
+
+</html>

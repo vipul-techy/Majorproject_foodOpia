@@ -1,0 +1,92 @@
+{% extends "index.html" %}
+
+{% block title %}
+
+    <title>Food Opia | Feedback</title>
+    {% endblock %}
+    {% block content %}
+
+ 
+
+    <style>
+        .a {
+            height: 50px;
+            width: 500px;
+            border-radius: 10px;
+        }
+
+        .b {
+            height: 100px;
+            width: 500px;
+            border-radius: 10px;
+        }
+
+        .c {
+            height: 50px;
+            width: 100px;
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+
+        }
+        .c:hover{
+            background-color: grey;
+        }
+
+        .about-section {
+            padding-top: 40px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+
+
+<body>
+    
+
+
+    <center>
+
+        <div class="about-section">
+
+            <h1>
+                <font size="+4" face="arial">Feedback Form</font>
+            </h1>
+
+        </div><br><br>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.968986927406!2d77.36625037562341!3d28.63069157566575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce551b264243f%3A0xcdbe8b40c091300!2sInstitute%20of%20Management%20Studies%20Noida!5e0!3m2!1sen!2sin!4v1682064795280!5m2!1sen!2sin"
+                        width="550" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <form name="contact">
+
+                        <input type="text" name="fn" placeholder="&nbsp;Name" class="a" required><br><br>
+                        <input type="email" name="em" placeholder="&nbsp;E-Mail" class="a" required><br><br>
+                        <input type="number" name="nm" placeholder="&nbsp;Contact Number" class="a" required><br><br>
+                        <textarea name="tx" placeholder="&nbsp;Message" class="b" rows="5" cols="10"></textarea><br><br>
+                        <button name="sb" class="c">Submit</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </center>
+</body>
+
+        {% endblock %}

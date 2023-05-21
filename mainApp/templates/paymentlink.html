@@ -1,0 +1,32 @@
+{% load static %}
+{% block title %}
+    <title>Food Opia | Payment</title>
+     {% endblock %}
+      {% block content %} 
+    <link rel="icon" href="{% static  'images/test-fo.png' %}" type="image/x-icon">
+    <style>
+        *{
+            margin: 0px;padding: 0px;box-sizing: border-box;
+        }
+        .link-class{
+            min-height: 100vh;
+            display: flex;
+            background-color: lightskyblue;
+            font-size: 2.5rem;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        .link-class:hover{
+            background: linear-gradient(to right,lightskyblue,lightgreen);
+            transition: all 0.8s;
+        }
+
+    </style>
+
+<body>
+    <a class="link-class" href="https://rzp.io/l/EqXgl3EQv"> Payment Link </a>
+</body>
+</html>
+{% endblock %}

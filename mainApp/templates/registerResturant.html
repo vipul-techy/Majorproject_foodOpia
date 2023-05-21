@@ -1,0 +1,85 @@
+<title>Food Opia | Add Restaurant</title>
+{% extends "order.html" %}
+
+
+{% block content %}
+<form action="/successRegistration/" method="post">
+    {% csrf_token %}
+    <div class="container  text-center mt-5 mb-2">
+        <div class="row  m-auto  w-50 ">
+        <h1> <span class="text-light text-secondary m-5 p-3"> Register Restaurant</span></h1>
+        <hr>
+        {% for item in messages %}
+
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{item}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        <div class="col-lg-6 " >
+            <label for="name" class="form-label  ">Restaurant Name</label>
+            <input type="text" placeholder="Enter Restaurant Name" class="form-control w-100 m-auto "   name="restaurantName" id="name"  required>
+        </div>
+        
+        <div class="col-lg-6 " >
+            <label for="name" class="form-label  ">Owner Name</label>
+            <input type="text" placeholder="Enter Name" class="form-control w-100 m-auto "   name="ownerName" id="name"  required>
+        </div>
+
+        <div class="col-lg-6 ">
+            <label for="gst" class="form-label    ">GST Number</label>
+            <input type="text" class="form-control " name="GSTNumber" placeholder="Enter GST No." id="gst"  required>
+
+        </div>
+        <div class="col-lg-6 ">
+            <label for="fssai" class="form-label    ">FSSAI Number</label>
+            <input type="text" class="form-control " name="FSSAINumber" placeholder="Enter FSSAI No." id="fssai" required>
+
+        </div>
+        <div class="col-lg-6 ">
+            <label for="address" class="form-label    ">Address</label>
+            <input type="text" class="form-control " name="Address" placeholder="Address" id="address"  required>
+
+        </div>
+        <div class="col-lg-6 ">
+            <label for="mobile" class="form-label    ">Phone No.</label>
+            <input type="text" class="form-control " name="PhoneNo" placeholder="Phone No." id="mobile" required>
+
+        </div>
+<!-- <hr> -->
+        <div class="col-lg-6 ">
+            <label for="username" class="form-label  ">UserName</label>
+            <input type="text" placeholder="Enter Username" class="form-control w-100 m-auto "   name="UserName" id="username" required>
+        </div>
+        <div class="col-lg-6 ">
+            <label for="email" class="form-label    ">Email</label>
+            <input type="email" class="form-control " name="Email" placeholder="Email" id="email" required>
+
+        </div>
+        
+<!-- <hr> -->
+        <div class="col-lg-6 ">
+            <label for="password" class="form-label    ">Password</label>
+            <input type="password" class="form-control " name="password" placeholder="Password" id="password" required>
+        </div>
+        <div class="col-lg-6 ">
+            <label for="cpassword" class="form-label    ">Confirm Password</label>
+            <input type="password" class="form-control " name="cpassword" placeholder="Confirm Password" id="cpassword" required>
+
+        </div>
+        
+        
+<!-- <hr> -->
+        <div class="col-lg-12 mt-2">
+            <input type="submit" class="btn btn-secondary mt-2 w-100" value="Register" name="" id="">
+
+        </div>
+        
+       
+        
+    
+    </div>
+    </div>
+    </form>
+    
+{% endblock %}

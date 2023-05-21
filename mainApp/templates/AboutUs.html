@@ -1,0 +1,84 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+
+  {% block title %}
+
+  <title>Food Opia | About Us</title>
+  {% endblock %}
+  {% block content %}
+
+  <style>
+
+    .about-section {
+    padding-top: 40px;
+    text-align: center;
+    color: white;
+    }
+
+    .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    }
+
+    h3,p{text-align: center;}
+
+    @media screen and (max-width: 768px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+    }
+  </style>
+  
+  <div class="about-section">
+    <h1>About Us</h1>
+    <p>We are a team of three members aimed to create a Food delivery platform namely Food Opia to
+      provide best cuisines with different categories at reasonable costs</p>
+  </div>
+
+    <div class="row">
+      <div class="col-5 d-flex justify-content-center">
+      <div class="card" style="width: 20rem; margin-left: 50px;">
+        <img src="{% static "images/AmanImage.jpg" %}" alt="amankumar" style="height: auto; width:auto;">
+          <h3 style="color: black;">Aman Kumar</h3>
+          <p style="color: black;">Front-End Developer</p>
+          <p><a style="color: blue;" href="https://mail.google.com/mail/u/0/#compose">amankumar.mca21042@imsnoida.com</a></p>
+          </div>
+          </div>
+          
+          <div class="col-1 d-flex justify-content-center"> 
+          <div class="row ">
+      <div class="card" style="width: 20rem; margin-left: 120px; ">
+        <img src="{% static "images/RaunakImage.jpg" %}" alt="raunak" style="height: auto;">
+          <h3 style="color: black;">Raunak Kumar</h3>
+          <p style="color: black;">Back-End Developer</p>
+          <p><a style="color: blue;" href="https://mail.google.com/mail/u/0/#compose">raunak.piro@gmail.com</a></p>
+        </div>
+      </div>
+      </div>
+    
+      <div class="col-5 d-flex justify-content-center"> 
+      <div class="row ">
+      <div class="card" style="width: 20rem; margin-left: 200px;">
+        <img src="{% static "images/VipulImage.jpg" %}" alt="vipulanand" style="height: auto;">
+          <h3 style="color: black;">Vipul Anand</h3>
+          <p style="color: black;">Front-End Developer</p>
+          <p><a style="color: blue;" href="https://mail.google.com/mail/u/0/#compose">vipulanand369@gmail.com</a></p>
+        </div>
+      </div> 
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+

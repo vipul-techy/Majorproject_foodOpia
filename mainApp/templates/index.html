@@ -1,0 +1,324 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Food Opia landing page.">
+    <meta name="author" content="Food Opia">
+
+    <link rel="icon" href="{% static  'images/test-fo.png' %}" type="image/x-icon">
+    {% block title %}
+    <title>Food Opia</title>
+    {% endblock %}
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <link rel="stylesheet" href="assets/vendors/animate/animate.css">
+    <link href="{% static "css/themify-icons.css" %}" rel="stylesheet">
+    <link href="{% static "css/foodhut.css" %}" rel="stylesheet">
+    <!-- Bootstrap + FoodHut main styles -->
+    <link rel="stylesheet" href="assets/css/foodhut.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Navbar -->
+    <nav class=" navbar navbar-expand-lg" >
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse mb-6" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" style="border: 2px solid white; border-radius: 10px;margin-right: 5px;color: white;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/AboutUs/"  style="border: 2px solid white; border-radius: 10px;margin-right: 5px;color: white;">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/registerResturant/"  style="border: 2px solid white; border-radius: 10px;margin-right: 5px;color: white;">Add Restaurant</a>
+                </li>
+              
+            </ul>
+            <a class="navbar-brand m-auto" href="#">
+                <img src="{% static 'images/foodopia-logo.png' %}"  class="brand-img">
+                <span class="brand-txt"> <img src="{% static 'images/foodopia-logo.png' %}"></span>
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/feedback/"  style="border: 2px solid; border-radius: 10px;margin-right:5px; color: white;">Feedback</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signup/"  style="border: 2px solid; border-radius: 10px;margin-right: 5px;" >Sign-Up</a>
+                </li>
+
+                <li class="nav-item">
+                {% if user.is_authenticated %}
+                <a class="nav-link" href="/logout/" style="border: 2px solid; border-radius: 10px;margin-right: 5px;">Sign-Out</a>
+                {% else %}
+                <a href="/LoginPage/" style="text-decoration: none;">
+                    <a class="nav-link" href="/login/" style="border: 2px solid; border-radius: 10px;margin-right: 5px;">Sign-In</a>
+                {% endif %}
+                </li>
+
+
+                
+            </ul>
+        </div>
+    </nav>
+    <!-- header -->
+    {% block content %}
+
+    <header id="home" class="header">
+        <div class="overlay text-white text-center">
+            <h1 class="display-4 font-weight-bold my-3">Food Opia</h1>
+            <h2 class="display-6  mb-5">Always fresh &amp; Delightful</h2>
+            <a class="btn btn-lg btn-secondary" href="/order/">Menu</a>
+        </div>
+    </header>
+
+    <!--  About Section  -->
+    <div id="about" class="container-fluid wow fadeIn" id="about" data-wow-duration="1.5s">
+        <div class="row">
+            <div class="col-lg-6 "> <img src="{% static 'images/gallary-12.jpg' %}" style="margin-left: 15px;margin-top: 30px;">  </div>
+            <div class="col-lg-6">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 py-1 my-1">
+                        <h2 class="mb-1">About Website</h2>
+                        <p>Launched in Noida, Food Opia has grown from a home project to one of the largest food aggregators in
+                            the world. We are present in India and 5+ cities, enabling our vision of better food for more
+                            people. We not only connect people to food in every context but work closely with restaurants to
+                            enable a sustainable ecosystem.<br><br>
+                            Our Chefs come from all parts of the country and serve their unique traditional cuisines. From Bengali Food to Gujrati Food, Rajasthani Food to Maharashtrian Footman Food to Andhra food, Kashmiri Food to Assamese Food, we serve the most Authentic Food Homewood the Traditional Food Culture of India. Food is cooked only when an Order is booked. We Stand for Fresh, Delicious and Healthy Food made in Hygienic Home Kitchens.<br><br>
+                            Celebrate Home Food Every day and Explore the Food Culture of India. We feel Humbled that we are enabling Homemakers to contribute towards Nation Building and overjoyed with our Purpose –“Ghar Ki Lakshmi Bani Bharat ki Lakshmi”<br><br>
+                            We wish everyone a Healthy Life. Eat Healthy Home Food and Stay Fit.<br><br>
+                            With Gratitude, Team Food Opia
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  gallary Section  -->
+    <div id="gallary" class="text-center bg-dark text-light has-height-md middle-items wow fadeIn">
+        <h2 class="section-title">OUR MENU</h2>
+    </div>
+    <div class="gallary row">
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="{% static 'images/gallary-1.jpg' %}" class="gallary-img">
+        </div>
+
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="{% static 'images/gallary-2.jpg' %}" class="gallary-img">
+        </div>
+
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="{% static 'images/gallary-3.jpg' %}" class="gallary-img">
+        </div>
+
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="{% static 'images/gallary-4.jpg' %}" class="gallary-img">
+        </div>
+
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="{% static 'images/gallary-5.jpg' %}" class="gallary-img">
+        </div>
+
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="{% static 'images/gallary-6.jpg' %}" class="gallary-img">
+        </div>
+
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="{% static 'images/gallary-7.jpg' %}" class="gallary-img">
+        </div>
+
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="{% static 'images/gallary-8.jpg' %}" class="gallary-img">
+        </div>
+
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="{% static 'images/gallary-9.jpg' %}" class="gallary-img">
+        </div>
+
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="{% static 'images/gallary-10.jpg' %}" class="gallary-img">
+        </div>
+
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="{% static 'images/gallary-11.jpg' %}" class="gallary-img">
+        </div>
+
+        <div class="col-sm-6 col-lg-3 gallary-item wow fadeIn">
+            <img src="{% static 'images/gallary-12.jpg' %}" class="gallary-img">
+        </div>
+    </div>
+   
+
+    <!-- BLOG Section  -->
+    <div id="blog" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn">
+        <h2 class="section-title py-5">TRENDING CUISINES</h2>
+        <div class="row justify-content-center">
+            <div class="col-sm-7 col-md-4 mb-5">
+               
+            </div>
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="foods" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="{% static  'images/blog-1.jpg' %}" 
+                                class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="/order/" class="badge badge-primary">₹120</a></h1>
+                                <h4 class="pt20 pb20">Veggie-Burger</h4>
+                                <p class="text-white">A Veg-hamburger, or simply burger, is a sandwich consisting of fillings—usually. Hamburgers are often served with cheese, lettuce, tomato, onion, pickles, or chilis; condiments such as ketchup, mustard, mayonnaise, relish, or a "special sauce," often a variation of Thousand Island dressing; and are frequently placed on sesame seed buns. A hamburger patty topped with cheese is called a cheeseburger </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="{% static  'images/blog-2.jpg' %}" 
+                                class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="/order/" class="badge badge-primary">₹110</a></h1>
+                                <h4 class="pt20 pb20">Fruit-Salad</h4>
+                                <p class="text-white">Fruit salad is a dish consisting of various kinds of fruit, sometimes served in a liquid, either their juices or a syrup. In different forms, fruit salad can be served as an appetizer or a side salad. When served as an appetizer, a fruit salad is sometimes known as a fruit cocktail (often connoting a canned product), or fruit cup (when served in a small container).
+                                    There are many types of fruit salad, ranging from the basic (no nuts, marshmallows, or dressing) to the moderately sweet (Waldorf salad) to the sweet (ambrosia salad). Another "salad" containing fruit is a jello salad, with its many variations.  </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-transparent border my-3 my-md-0">
+                            <img src="{% static  'images/blog-3.jpg' %}" 
+                                class="rounded-0 card-img-top mg-responsive">
+                            <div class="card-body">
+                                <h1 class="text-center mb-4"><a href="/order/" class="badge badge-primary">₹200</a></h1>
+                                <h4 class="pt20 pb20">Non-Veg Burger</h4>
+                                <p class="text-white">A hamburger, or simply burger, is a sandwich consisting of fillings—usually a patty of meat.Hamburgers are often served with cheese, lettuce, tomato, onion, pickles or chilis; condiments such as ketchup, mustard, mayonnaise, relish, or a "special sauce," often a variation of Thousand Island dressing; and are frequently placed on sesame seed buns. A hamburger patty topped with cheese is called a cheeseburger. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+    <!-- REVIEWS Section  -->
+    <div id="testmonial" class="container-fluid wow fadeIn bg-dark text-light has-height-lg middle-items">
+        <h2 class="section-title my-5 text-center">REVIEWS</h2>
+        <div class="row mt-3 mb-5">
+            <div class="col-md-4 my-3 my-md-0">
+                <div class="testmonial-card">
+                    <h3 class="testmonial-title">Amit Kumar Sharma</h3>
+                    <h6 class="testmonial-subtitle">Customer (Mayur Vihar,Delhi)</h6>
+                    <div class="testmonial-body">
+                        <p>Quality and hygienic food delivery
+                            amazing taste, hot and fresh food serving restaurant, reasonable prices and quick service,
+                            very impressive food</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-3 my-md-0">
+                <div class="testmonial-card">
+                    <h3 class="testmonial-title">Pintoo Bhargo</h3>
+                    <h6 class="testmonial-subtitle">Customer (Swaroop Nagar,Delhi)</h6>
+                    <div class="testmonial-body">
+                        <p>Good taste, Great Service
+                            The Food on call service is good, innovative and fast. Food taste is also good.
+                            But the food is little bit spicy and oily.
+                            Need to improve a little.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 my-3 my-md-0">
+                <div class="testmonial-card">
+                    <h3 class="testmonial-title">Lokesh Sharma</h3>
+                    <h6 class="testmonial-subtitle">Customer (Khora,Noida)</h6>
+                    <div class="testmonial-body">
+                        <p>Quality superb food service in Delhi-NCR
+                            huge option of food with quality and quantity.
+                            restaurant, home delivery and food delivery at all corners of city</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT Section  -->
+    <div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn">
+        <div class="row">
+            <div class="col-md-6 px-0">
+                <div id="map" style="margin-top: 25px;margin-left: 40px;" !important;>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.968986927407!2d77.36625037451967!3d28.630691575665722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce551b264243f%3A0xcdbe8b40c091300!2sInstitute%20of%20Management%20Studies%20Noida!5e0!3m2!1sen!2sin!4v1683386933620!5m2!1sen!2sin"
+                     width="600" height="450" style="border: 2px solid black;"  referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                </div>
+            </div>
+            <div class="col-md-6 px-5 has-height-lg middle-items">
+                <h3>FIND US</h3>
+                <p>Launched in Noida, Food Opia has grown from a home project to one of the largest food aggregators in
+                    the world. We are present in India and 5+ cities, enabling our vision of better food for more
+                    people. We not only connect people to food in every context but work closely with restaurants to
+                    enable a sustainable ecosystem.
+                </p>
+                <div class="text-muted">
+                    <p><span class="ti-location-pin pr-3"></span>A-8B IMS Campus Building, Sector 62, Noida, 201303,
+                        India</p>
+                    <p><span class="ti-support pr-3"></span>+91-9873181345</p>
+                    <p><span class="ti-email pr-3"></span>www.foodopia.in</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- page footer  -->
+    <div class="container-fluid bg-dark text-light has-height-md middle-items border-top text-center wow fadeIn">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>EMAIL US</h3>
+                <P class="text-muted">www.foodopia.in</P>
+            </div>
+            <div class="col-sm-4">
+                <h3>CALL US</h3>
+                <P class="text-muted">+91-9873181345</P>
+            </div>
+            <div class="col-sm-4">
+                <h3>FIND US</h3>
+                <P class="text-muted">A-8B IMS Campus Building, Sector 62, Noida, Uttar Pradesh 201303, India</P>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    <!-- <div class="bg-dark text-light text-center border-top wow fadeIn">
+        <p class="mb-0 py-3 text-muted small">&copy; Copyright
+            <script>document.write(new Date().getFullYear())</script> Made with <i class="ti-heart text-danger"></i> By
+            <a href="/Privacy/">Food Opia India.</a>
+        </p>
+    </div> -->
+    <!-- end of page footer -->
+
+    <!-- core  -->
+    <!-- <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script> -->
+
+    <!-- bootstrap affix -->
+    <!-- <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script> -->
+
+    <!-- wow.js -->
+    <!-- <script src="assets/vendors/wow/wow.js"></script> -->
+
+    <!-- google maps -->
+    <!-- <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script> -->
+
+
+    <!-- FoodHut js -->
+    <!-- <script src="assets/js/foodhut.js"></script> -->
+
+</body>
+
+</html>

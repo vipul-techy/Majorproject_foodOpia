@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}
+
+<link rel="icon" href="{% static  'images/test-fo.png' %}" type="image/x-icon">
+<title>Food Opia | COD</title>
+{% endblock %}
+{% block content %}
+<style>
+  .cod-detail {
+    text-align: center;
+    height: 50px;
+    width: 500px;
+    border: 3px solid black;
+    border-radius: 5px;
+  }
+
+  .cod-detail:hover {
+    background: lightgrey;
+  }
+
+  .btn-cod {
+    height: 50px;
+    width: 100px;
+    background: white;
+    border: 2px solid black;
+  }
+
+  .btn-cod:hover {
+    background: grey;
+  }
+</style>
+</head>
+
+<body>
+  <h1 style="text-align:center; border:2px solid grey; box-sizing:border-box;">
+    <marquee width="100%" behavior="alternate" direction="left" scrollamount="50">
+      Cash on Delivery</marquee>
+  </h1>
+  <center>
+    <form>
+      <input class="cod-detail" type="text" name="name" placeholder="Enter Name" required><br><br>
+      <input class="cod-detail" type="password" name="password" placeholder="Enter Password" required><br><br>
+      <input class="cod-detail" type="number" name="mobile_no" placeholder="Enter Mobile No." required><br><br>
+      <input class="cod-detail" type="text" name="address" placeholder="Enter Address" required><br><br>
+      <input class="cod-detail" type="text" name="city" placeholder="Enter City Name" required><br><br>
+      <input class="cod-detail" type="text" name="state" placeholder="Enter State Name" required><br><br>
+      <input class="cod-detail" type="number" name="pin code" placeholder="Enter Pin Code" required><br><br>
+      <button class="btn-cod">Submit</button>
+    </form>
+  </center>
+  {% endblock %}
